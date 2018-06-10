@@ -8,7 +8,18 @@ import { Component, Prop } from '@stencil/core';
 export class MyComponent {
 
   @Prop() first: string;
-  @Prop() last: string;
+
+  @Prop()
+  last: string;
+
+  foo() {
+    const sema = 2;
+    return sema * 2
+  }
+
+  baz() {
+    console.log('Method not called!');
+  }
 
   render() {
     return (
